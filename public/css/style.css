@@ -1,0 +1,35 @@
+@font-face{
+    font-family: 'FP-Playkiddo';
+    src:url('../Font/titre/Playkiddo.ttf') format('truetype')
+}
+@font-face{
+    font-family: 'FP-Oswald';
+    src:url('../Font/static/Oswald-Regular.ttf') format('truetype')
+}
+@font-face{
+    font-family: 'FP-Menu';
+    src:url('../Font/menu/Righteous-Regular.ttf') format('truetype')
+}
+.FP-titre {
+    font-family: FP-Playkiddo;
+}
+.FP-static{
+    font-family: FP-Oswald ;
+}
+.FP-Menu{
+    font-family: FP-Menu;
+}
+.S_Menu
+{
+    display: none;
+}
+.V_Menu
+{
+    display: block;
+}
+.Cfocus
+{
+ input:focus{
+    border: 2px solid blue;
+ }
+}
