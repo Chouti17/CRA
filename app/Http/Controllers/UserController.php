@@ -8,11 +8,32 @@ class UserController extends Controller
 { 
     
    //Page 
+   public function login(Request $request)
+   {
+     
+     
+     try {
+      $input = $request->all();
+     } catch (\Throwable $th) {
+      
+      return response()->json([
+         "status"=> false,
+         "message"=> $th->getMessage(),
+      ]);
+     }
 
-   public function Dashbord()
+
+   }
+   public function Dashboard()
    {
     //Dashboard User
-    return view('User.DashboardUser');
+    return view('User.DashbordUser');
+
+   }
+   public function Stock()
+   {
+    //Dashboard User
+    return view('User.PageStock');
 
    }
 

@@ -76,3 +76,57 @@ function Desactivez()
     Btn2.classList.remove('block');
     Btn2.classList.add('hidden');
 }
+function ActiveHeader()
+{
+    const btnA = document.querySelector('.hA');
+    const btnD = document.querySelector('.hD');
+    const btn = document.querySelector('.hC');
+    
+
+    
+    btn.classList.remove('md:block');
+    //btn.classList.add('md:hidden');
+    btnA.classList.add('hidden');   
+    btnD.classList.remove('hidden');
+    btnD.classList.add('block');
+}
+function DesactiveHeader()
+{
+    const btnA = document.querySelector('.hA');
+    const btnD = document.querySelector('.hD');
+    const btn = document.querySelector('.hC');
+
+    btnD.classList.remove('block');
+    btnD.classList.add('hidden');
+    btn.classList.remove('md:hidden');
+    btn.classList.add('md:block');
+   
+    btnA.classList.remove('hidden');
+    btnA.classList.add('block');
+}
+
+function Pop()
+{
+    let pop = document.querySelector('.Pop');
+    pop.classList.remove('Pops');
+    pop.classList.remove('hidden');
+    pop.classList.add('Popt');
+    pop.classList.add('block')
+    pop.addEventListener('animationend', () => {
+        pop.classList.remove('hidden');
+        pop.classList.add('block')
+        
+      });
+    
+}
+function PopR()
+{
+    let pop = document.querySelector('.Pop');
+    pop.classList.remove('Popt');
+    pop.classList.add('Pops');
+    pop.addEventListener('animationend', () => {
+        pop.classList.remove('block');
+        pop.classList.add('hidden');
+      });
+    
+}

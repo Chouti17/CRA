@@ -15,11 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('nom');
             $table->string('prenom');
-            $table->integer('numero');
+            $table->string('email');
 
-            $table->string('email')->nullable();
-            $table->string('n_societe')->nullable();
-            $table->string('s_geographique')->nullable();
+            $table->string('telephone');
+
+            $table->string('n_societe');
+            $table->string('address');
             $table->timestamps();
         });
     }

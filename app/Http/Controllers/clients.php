@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\client;
+use App\Models\categorie;
 use App\Http\Requests\Ajout_client;
+
 
 use Illuminate\Http\Request;
 
@@ -13,16 +15,25 @@ class clients extends Controller
     {
         return view('Client.Ajouterclient');
     }
+  
 
     public function Ajout_client(client $table, Ajout_client $request)
-    { 
+    {
         client::create([
             'nom' => $request->nom,
             'prenom' => $request->prenom,
             'email' => $request->email,
-            'numero' => $request->telephone,
-            'n_societe' => $request->societe,
-            's_geographique' => $request->position,
+            'telephone' => $request->telephone,
+            'n_societe' => $request->n_societe,
+            'address' => $request->address,
         ]);
+
+
+        $return = 'Le client '. $request->nom .' a été ajouter avec succes';
+
+
+        $request->session()->flash('success', $return );
+
+        return redirect()->route('Dashboard');
     }
 }

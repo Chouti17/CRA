@@ -26,6 +26,8 @@ class Ajout_client extends FormRequest
             'prenom' => 'required|min:3',
             'email'  => 'email',
             'telephone' => 'required|min:8',
+            'n_societe' => 'required',
+            'address' =>'required'
         ];
     }
 
@@ -38,10 +40,15 @@ class Ajout_client extends FormRequest
             'prenom.required' => 'Le prenom du client est requis',
             'prenom.min' => 'Le prenom du client doit comporter au moins trois caractères.',
 
-            
+
 
             'telephone.required' => 'Le numero de telephone du client est requis',
-            'telephone.min' => 'Le numero de telephone du client contenir au moins huit chiffres',
+            'telephone.min' => 'Le numero de telephone du client doit contenir au moins huit chiffres',
+
+            'n_societe.min' => 'Le nom de la société du client est requis',
+
+            'address.min' => 'Address est requis',
+
         ];
     }
 
